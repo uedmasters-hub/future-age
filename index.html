@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Future Age | Designing the Cognitive Era</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      // Polyfill process.env for React Router
+      window.process = { env: { NODE_ENV: 'production' } };
+
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+              display: ['Space Grotesk', 'sans-serif'],
+            },
+            colors: {
+              'swiss-red': '#FF2E00',
+              'off-white': '#FAFAFA',
+              'carbon': '#0A0A0A',
+              'grid-line': '#E5E5E5',
+            },
+            backgroundImage: {
+              'grid-pattern': "linear-gradient(to right, #E5E5E5 1px, transparent 1px), linear-gradient(to bottom, #E5E5E5 1px, transparent 1px)",
+              'dot-pattern': "radial-gradient(#E5E5E5 1px, transparent 1px)",
+            },
+            backgroundSize: {
+              'grid-lg': '40px 40px',
+              'grid-sm': '20px 20px',
+              'dot': '20px 20px',
+            },
+            animation: {
+              'marquee': 'marquee 25s linear infinite',
+              'fade-in': 'fadeIn 0.8s ease-out forwards',
+              'spin-slow': 'spin 15s linear infinite',
+            },
+            keyframes: {
+              marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-100%)' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #FAFAFA;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #D1D5DB;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #9CA3AF;
+      }
+      
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-router": "https://aistudiocdn.com/react-router@6.22.3",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@6.22.3",
+    "@remix-run/router": "https://aistudiocdn.com/@remix-run/router@1.15.3"
+  }
+}
+</script>
+</head>
+  <body class="bg-off-white text-carbon antialiased selection:bg-swiss-red selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
